@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Projets</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet"> 
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNavProject">
+
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Projets - Lilian Pattier</span>
+                <!--<span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profil.png" alt="" /></span>-->
+                
+            </a>
+            <span class="d-none d-lg-block"><h3 class="text-white">Liste des projets</h3></span>
+
+            <a class="d-block d-lg-none ml-auto mr-3 text-white" href="index.html"><i class="fas fa-home"></i></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#1">Segmentation de vols</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#2">Optimisation d'une centrale hydro-éléctrique</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#3">RNN générateur de Haïku</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#4">Learning Flappy Bird</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#5">Reconnaissance de panneaux</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#6">Solveur de Sudoku</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#7">Agent de ménage intelligent</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#8">IA Echecs</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#9">Calculateur d'itinéraire de bus</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#10">Carnet de vol en ligne</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#11">Cryptographie post-quantique</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#12">Etude du Bitcoin</a></li>
+                    <!--<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#12">Etude de l'heuristique IWO</a></li>-->
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            
+            <section class="project-section" id="1">
+                <div class="project-section-content">
+                    <h2>Segmentation de vols</h2>
+                    <p class="mb-4">
+                    	<span class="badge badge-pill badge-primary">Projet</span>
+						<span class="badge badge-pill badge-secondary">IA - ML</span>
+					</p>
+                    <p>	Cette page présente les travaux effectués lors de mon stage de fin d'études chez Safran Aircraft Engines, au sein du département Analyse de Données et Statistiques.
+                    	 L’objectif était de tester l’implémentation et l’efficacité de l’apprentissage profond, et plus spécifiquement des réseaux de neurones convolutifs dans le cadre de l’analyse de données de vols. Ces structures se sont révélées particulièrement efficaces dans le traitement d’image. Le but était alors de transposer les méthodes et outils à l’analyse de séries temporelles multivariées dans le domaine de l’aviation.</p>
+                    	 <div class="row my-3 justify-content-md-center">
+                    	 	<div class="col-md-5">
+                    	 		<img src="assets/img/projet/stage/stage2.png" alt="..." class="img-thumbnail my-2">
+                    	 	</div>
+                    	 	<div class="col-md-5">
+                    	 	<img src="assets/img/projet/stage/stage1.png" alt="..." class="img-thumbnail my-2">
+                    	 </div>
+                    	 </div>
+                    	 <p>
+                    	 	La structure principale sur laquelle j'ai travaillé est le réseau fully convolutionnal U-Net. Cette structure est à la base utilisée pour la segmentation d'images biomédicales. Mon objectif a été de l'adapter à l'analyse de séries temporelles multivariées, et donc de passer d'une implémentation 2D à une implémentation en 1D, de façon à pouvoir segmenter les vols en différentes portions d'intérêt. (Ici la dimension représente le degré de liberté du parcours des filtres, et non pas le nombre de canaux de la donnée).
+						</p>
+						
+						<p>	
+							Les résultats obtenus furent satisfaisant puisque le réseau performe à une accuracy d'envrion 95%. Il est a noté également que le réseau est capable de détecter des portions de vols qui n'étaient pas labélisées dans la segmentation réelle. Outre cette tâche principale, j'ai été amené à réaliser différents travaux annexes. Je vous invite à consulter mon rapport de stage ci-dessous.
+                    	</p>
+                    	<ul class="list-group my-4">
+						  <li class="list-group-item"><i class="fas fa-file-pdf"></i><a href="assets/pdf/projects/stage/rapport_stage_cnn.pdf" class="pl-3">Consulter le rapport de stage</a></li>
+						</ul>
+                    	
+
+                </div>
+            </section>
+            <hr class="m-0" />
+        	
+        	<section class="project-section" id="2">
+                <div class="project-section-content">
+                    <h2>Optimisation d'une centrale hydro-éléctrique</h2>
+                    <p class="mb-4">
+                   		<span class="badge badge-pill badge-primary">Projet</span>
+						<span class="badge badge-pill badge-warning">Optimisation</span>
+						<span class="badge badge-pill badge-info">Maths</span>
+					</p>
+
+                    <p>Dans le cadre d'un cours de résolution de problèmes industriels, nous avons été amené à optimiser la puissance produite par une centrale hydro-électrique. </p>
+
+                    <p> Nous disposions d'un jeu de données d'une centrale hydro-electrique, présentant différentes grandeurs : élévation avale, débit total à la centrale, élevation amont, débits turbinés par chaque unité (turbine) et puissances produites par chaque unité. A partir de ces données, nous devions :
+                    	<ul>
+                    		<li>Modéliser les fonctions de production hydroélectrique et les fonctions de productions aval</li>
+                    		<li>Modéliser et implémenter le problème d'optimisation à court terme</li>
+                    		<li>Modéliser et implémenter un algorithme de programmation dynamique permettant le chargement optimal des groupes</li>
+                    		<li>Réaliser une interface implémentant les algorithmes précédents (JAVA)</li>
+                    	</ul>
+                    </p>
+
+                    
+
+                    <div class="row my-3 justify-content-md-center">
+                    	 	<div class="col-md-8">
+                    	 		<img src="assets/img/projet/centrale/interface.png" alt="..." class="img-thumbnail my-2">
+                    	 	</div>
+                  	</div>
+
+                    <p>Ayant accès à des données historiques, nous avons créé une représentation analytique des fonctions de production que nous avons ensuite donné au modèle d’optimisation. Pour assurer une gestion efficace du réseau, nous avons ensuite implémenté un outil permettant de déterminer les
+					turbines en marche et le débit qu’elles doivent turbiner afin de maximiser la puissance totale produite.
+					Cet outil tire son importance du fait que l’efficacité des groupes turbo-alternateurs varie d’un groupe à l’autre. L'outil développé se base sur la programmation dynamique. Il prend également en compte des restrictions d'opération (turbine en panne, restriction d'un opérateur sur le débit de certains groupes...).</p>
+					<ul class="list-group my-4">
+						  <li class="list-group-item"><i class="fas fa-file-pdf"></i><a href="assets/pdf/projects/centrale/rapport_opti_centrale_1.pdf" class="pl-3">Rapport de projet (partie 1 : modélisation des fonctions)</a></li>
+						  <li class="list-group-item"><i class="fas fa-file-pdf"></i><a href="assets/pdf/projects/centrale/rapport_opti_centrale_2.pdf" class="pl-3">Rapport de projet (partie 2 : algorithme de programmation dynamique)<a></li>
+						  <li class="list-group-item"><i class="fas fa-file-pdf"></i><a href="assets/pdf/projects/centrale/rapport_opti_centrale_3.pdf" class="pl-3">Rapport de projet (partie 3 : présentation de l'interface)</a></li>
+					</ul>
+
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <section class="project-section" id="3">
+                <div class="project-section-content">
+                    <h2>RNN générateur de Haïku</h2>
+                    <p class="mb-4">
+											<span class="badge badge-pill badge-primary">Projet</span>
+											<span class="badge badge-pill badge-secondary">IA - ML</span>
+											<span class="badge badge-pill badge-success">Web</span>
+										</p>
+                    <p>
+                    	Un haïku est un court poème né au japon au 17ème siècle. Il se compose généralement de 3 vers et vise à décrire l'ordinaire avec simplicité et singularité.
+                    A titre d'exemple, voici un célèbre Haïku japonais :</p>
+                    <p>
+                   	<blockquote class="blockquote text-center py-3">
+					  <p class="mb-0">Sous la pluie d’été<br>
+						Raccourcissent<br>
+						Les pattes du héron.</p>
+					  <footer class="blockquote-footer">Matsuo Bashõ (1644-1695)</footer>
+					</blockquote>
+                    </p>
+                    <p>
+						Dans le cadre d'un projet de session de Machine Learning, nous nous sommes attelés à l'implémentation d'une IA génératrice de Haïkus. Cette IA repose sur une structure de neurones récurrents. Une fois le réseau entraîné sur un grand nombre d'Haïkus existant, ce dernier est capable de générér, lettre par lettre, de nouveaux haïkus. 
+                    </p>
+                    <p>
+                    	Le projet a été réalisé en Python à l'aide de la librairie Tensorflow.
+                    </p>
+                    <p>
+                    	L'une des difficultés à laquelle nous avons du palier dans ce projet est la constitution de la base de données d'entraînement. A la date du projet, il n'existait pas de base de données brute de haïkus en français. Nous avons du réaliser des scripts permettant l'extraction automatique de dizaines de milliers de Haïkus sur une dizaine de sites différents. Une fois la base constituée (bien qu'un peu "light" pour une structure de réseaux profond), notre IA a pu générer ses premiers Haïkus.
+                    </p>
+                    <p>
+                    	Finalement, nous avons réalisé le portage de ce projet sur un site web grâce à la librairie javascript tensorflow.js. Je vous invite à consulter le site ci-dessous.
+                    </p>
+                    <ul class="list-group my-4">
+						  <li class="list-group-item"><i class="fas fa-globe"></i></i><a href="http://haiku-rnn.fr/" class="pl-3">Site Web RNN Haiku</a></li>
+						  <li class="list-group-item"><i class="fas fa-file-pdf"></i><a href="http://haiku-rnn.fr/sprint_1.pdf" class="pl-3">Rapport de projet<a></li>
+						
+					</ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <section class="project-section" id="4">
+                <div class="project-section-content">
+                    <h2>Learning Flappy Bird</h2>
+
+                    <p class="mb-4">
+											<span class="badge badge-pill badge-primary">Projet</span>
+											<span class="badge badge-pill badge-secondary">IA - ML</span>
+											<span class="badge badge-pill badge-success">Web</span>
+										</p>
+                    <p>Ce projet personnel combine Machine-Learning et algorithme évolutionnaire. Le but était de créer une IA capable d'apprendre à jouer au jeu "Flappy Bird". Le jeu consiste simplement à donner une impulsion à l'oiseau de façon à ce qu'il passe entre les tuyaux le long de son parcours.</p>
+                    <p>Pour ce faire, à chaque itération, on introduit une population d'oiseaux. Chaque individu de cette population est doté d'un état mental codé par un réseau de neurones simple (de type perceptron). Les neurones de la couche d'entrées correspondent à des données inhérentes à la position de l'oiseau dans son environnement (espacement par rapports aux tuyaux, vitesse verticale...). La couche de sortie comporte un neuronne. Lorsque le neuronne est activé, l'oiseau saute.</p>
+                    <p>Pour arriver à nos fins, nous utilisons un algorithme génétique. L'apprentissage se fait à l'aide d'une fonction fitness qui évalue la performance de l'individu. Lorsque tous les oiseaux ont échoué, on créé une nouvelle population à partir de la population précédente, en gardant les meilleurs individus et en introduisant des mutations et croisements entre les individus. Ces changements correspondent à des modifications de l'état interne des oiseaux (ie. les poids des réseaux de neurones). De cette façon, les états mentaux des individus évoluent, les meilleurs individus sont d'autant plus susceptibles de participer à la prochaine population tandis que les moins bons sont éliminés.</p>
+                    <p>
+                   	La population évolue ainsi, jusqu'à ce que les individus soient finalement capables de jouer, sans jamais échouer.
+                   </p>
+
+                   <div class="row my-3 justify-content-md-center">
+                    	 	<div class="col-md-5">
+                    	 		<img src="assets/img/projet/flappy/flappy.png" alt="..." class="img-thumbnail my-2">
+                    	 	</div>
+                  	</div>
+                  	<p>Implémentation : Javascript</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+             <section class="project-section" id="5">
+                <div class="project-section-content">
+                    <h2>Reconnaissance de panneaux</h2>
+                    <p class="mb-4">
+                                            <span class="badge badge-pill badge-primary">Projet</span>
+                                            <span class="badge badge-pill badge-purple">Computer Vision</span>
+                                        </p>
+                    <p>Le but de ce projet était de développer une application de détection et de reconnaissance en temps réel de panneaux de circulation dans un flux vidéo. Nous avons implémenté le programme en Java à l'aide de la librairie de Computer Vision "OpenCV".</p>
+                    <p>Le traitement vidéo est effectué image par image. Chaque frame de la vidéo est prétraitée en plusieurs étapes : on commence par transformer l'image de l'espace RGB à l'espace HSV (Hue Saturation Value) plus tolérant et indépendant de la luminosité de l'image de façon à faciliter la détection ultérieure. A la suite de cette transformation, on sature les rouges pour cibler les zones pouvant potentiellement être des panneaux. Finalement, un filtre de Canny est appliqué pour détecter les contours et discriminer la signalisation d'autres potentiels objets. Les panneaux ainsi détectés sont extrait et on peut procéder à la reconnaissance.</p>
+                    <p>La reconaissance est réalisée par un matching brute-force à l'aide de l'algorithme ORB. ORB extrait des points d'intérêts dans des images de façon la plus indépendante possible de l'échelle, du cadrage, de l'angle d'observation et de l'exposition. On procède ainsi à l'extraction des features dans la frame du flux vidéo mais également dans notre base de données de panneaux. Une fois ces caractéristiques extraites, elles sont comparées à celles des panneaux en base. Le panneau le plus ressemblant (celui contenant le plus de similitudes avec le panneau détecté) est alors retenu. </p>
+                    
+
+                    <div class="row my-3 justify-content-md-center">
+                            <div class="col-md-8">
+                                <img src="assets/img/projet/opencv/opencv.png" alt="..." class="img-thumbnail my-2">
+                            </div>
+                    </div>
+
+                </div>
+                
+            </section>
+            <hr class="m-0" />
+
+            <section class="project-section" id="6">
+            	<div class="project-section-content">
+                    <h2>Solveur de Sudoku</h2>
+                    <p class="mb-4">
+											<span class="badge badge-pill badge-primary">Projet</span>
+											<span class="badge badge-pill badge-secondary">IA - ML</span>
+										</p>
+                    <p>Les solveurs de sudokus figurent parmi les grands classiques des problèmes de satisfaction de contraintes (CSP). Dans ce projet, nous avons proposé une amélioration du programme de backtracking classique permettant la résolution de sudokus. De façon à optimiser l'algorithme, nous avons introduit en plus 4 heuristiques permettant de guider la résolution de manière optimale:
+	                    <ul>
+	                    	<li>Minimum remaining values (MRV) : prioriser les cases avec le plus petit nombre de valeurs légales</li>
+	                    	<li>Degree Heuristic (bris d'égalité des MRV) : prioriser les cases avec le plus grand nombre de contraintes sur les cases restantes</li>
+	                   		<li>Least constraining value : pour une case donnée, choisir la valeur la moins contraignante</li>
+	                   		<li>Propagation de contraintes (Arc consistency) : garder une trace des valeurs légales restantes pour les cases non assignées</li>
+	                   	</ul>
+                    </p>
+                    <div class="row my-3 justify-content-md-center">
+                    	 	<div class="col-md-8">
+                    	 		<img src="assets/img/projet/sudoku/sudoku.png" alt="..." class="img-thumbnail my-2">
+                    	 	</div>
+                  	</div>
+                  	<p>Implémentation : JAVA</p>
+
+                </div>
+                
+            </section>
+            <hr class="m-0" />
+
+              <section class="project-section" id="7">
+                <div class="project-section-content">
+                    <h2>Agent de ménage intelligent</h2>
+                    <p class="mb-4">
+											<span class="badge badge-pill badge-primary">Projet</span>
+											<span class="badge badge-pill badge-secondary">IA - ML</span>
+										</p>
+                    <p>Ce projet est une mise en oeuvre de la programmation orienté agent. Le but était de réaliser un algorithme implémentant un agent aspirateur intelligent capable de détecter des poussières dans un environnement et de les aspirer de manière optimale.</p>
+                    <p>L'environnement dans lequel évolue l'agent est modélisé par un quadrillage de 100 cases dans lesquelles peuvent apparaître sporadiquement et aléatoirement deux types d'objets : des bijoux (devant être ramassés) et des poussières (devant être aspirées). Il contient également une mesure de performance que l'agent peut consulter (via ses capteurs).</p>
+                    <p>L'agent a plusieurs actions possibles : aspirer, ramasser un élément et se déplacer dans l'environnement. Chacune des actions lui coûte une unité d'électricité. Si l’agent aspire et qu’un bijou se trouve à cet endroit, l’environnement considère que celui-ci a été aspiré (le robot ne le sait pas forcément, puisqu’il ne l’avait pas perçu) – Il perd des points dans sa mesure de performance. Conformément aux principes agents, l'aspirateur dispose de capteurs (permettant d'appréhender l'environnement) et d'effecteurs (permettant d'agir sur celui-ci). L'agent est "basé sur les buts" : son état mental est codé sous la forme BDI (Beliefs-Desires-Intentions)</p>
+                    <p>Enfin, l'agent implémente deux algorithmes d'exploration : un non-informé (Recursive Depth-Limited Search) et un informé (Greedy Search). Au départ, il exécute son plan complet (à partir de ses intentions) sans percevoir de nouveau l’environnement. Puis, grâce à sa mesure de performance, après X itérations (à apprendre), il peut entrelacer l’exécution du plan de séquences de perception et d’une nouvelle phase d’exploration. L’agent tente finalement d’optimiser la fréquence d’exploration. </p>
+                    	
+                    <div class="row my-3 justify-content-md-center">
+                    	 	<div class="col-md-8">
+                    	 		<img src="assets/img/projet/agent/agent.png" alt="..." class="img-thumbnail my-2">
+                    	 	</div>
+                  	</div>
+
+                    <p>Note : L'agent et l'environnement s'exécutent sur deux fils d'exécution différents</p>
+                    <p>Implémentation : JAVA</p>
+                    <ul class="list-group my-4">
+						 <li class="list-group-item"><i class="fas fa-file-pdf"></i><a href="assets/pdf/projects/agent/rapport_agent_menage.pdf" class="pl-3">Rapport de projet<a></li>
+						
+					</ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+              <section class="project-section" id="8">
+                <div class="project-section-content">
+                    <h2>IA Echecs</h2>
+
+                    <p class="mb-4">
+											<span class="badge badge-pill badge-primary">Projet</span>
+											<span class="badge badge-pill badge-secondary">IA - ML</span>
+										</p>
+
+                    <p>L’objectif de ce projet est la conception d’un agent intelligent capable de jouer aux échecs contre un adversaire
+					(un autre agent ou un humain). L'agent est capable d’observer son environnement et de prendre une décision
+					sur le coup à jouer en fonction de ce dernier.</p>
+					
+					<p>Le programme est capable de communiquer avec une interface graphique
+					(GUI) open-source : Arena. Les frontières sont les suivantes : Le programme prend la forme d’un moteur de
+					jeu qui prend en entrée l’état de l’échiquier au moment de jouer (qui sera communiqué par le GUI), évalue en
+					interne le coup le plus favorable, et enfin transmet au GUI en sortie, le coup qu’il décide de jouer.
+					
+					Il est à noter que le GUI se contente d’effectuer les mouvements que le moteur lui transmet. Le moteur s'assure donc qu’il connaît l’état réel de l’échiquier, et que les mouvements qu’il envoie sont
+					des mouvements légaux.</p>
+
+					<p>Notre solution s’est tournée sur l’implémentation d’un agent intelligent qui évalue les configurations de l’échiquier
+					pour déterminer le mouvement le plus favorable qu’il peut jouer.
+					Nous utilisons pour cela, un algorithme MinMax, avec une profondeur fixée et implémenté avec un élagage
+					alpha-beta de façon à réduire le nombre de noeuds évalués. L'évaluation des coups est également associée à des matrices de positions qui permettent d'évaluer la valeur des différentes pièces selon leur localisation sur l'échiquier. Ainsi, l’agent simule un certain nombre de configurations à partir de l’échiquier courant, et suivant une profondeur fixée, évalue les configurations finales possibles puis choisit le mouvement le plus favorable pour lui en fonction
+					des évaluations réalisées.</p>
+					<p>Implémentation : JAVA</p>
+					<ul class="list-group my-4">
+						 <li class="list-group-item"><i class="fas fa-file-pdf"></i><a href="assets/pdf/projects/echecs/rapport_ia_echecs.pdf" class="pl-3">Rapport de projet<a></li>
+						
+					</ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+              <section class="project-section" id="9">
+                <div class="project-section-content">
+                    <h2>Calculateur d'itinéraire de bus</h2>
+                    <p class="mb-4">
+											<span class="badge badge-pill badge-primary">Projet</span>
+											<span class="badge badge-pill badge-warning">Optimisation</span>
+										</p>
+                    <p>Ce projet traite de l’implémentation d’un programme de calcul d’itinéraires sur un réseau de bus. Il
+						porte principalement sur la notion de recherche d’un chemin optimal dans un graphe.</p> 
+
+					<p>
+						Dans notre cas, le graphe représente un réseau de trois lignes de bus (A,B,C). Les sommets représentent
+						les stations tandis que les arêtes représentent les routes. Chaque arête est valuée par un nombre qui
+						représente le temps de parcours entre les deux stations adjacentes. Le but de l'algorithme est de trouver, à
+						partir de n’importe quelles stations de départ et d’arrivée, l’itinéraire le plus court en terme de temps.</p>
+						
+					<p>L'algorithme implémenté est une version améliorée de l'algorithme de Dijkstra.
+						Le programme gère les entrées/sorties et est donc théoriquement généralisable à n'importe quel réseau de bus : on dispose de
+						deux fichiers textes représentant respectivement les arrêts et lignes correspondantes puis les coordonnées
+						des différents arrêts. Le programme se charge de traiter ces informations pour
+						construire le graphe correspondant. Ensuite, l'algorithme de recherche de chemin optimal peut être lancé.</p>
+
+
+                    <div class="row my-3 justify-content-md-center">
+                    	 	<div class="col-md-8">
+                    	 		<img src="assets/img/projet/bus/bus.png" alt="..." class="img-thumbnail my-2">
+                    	 	</div>
+                  	</div>
+
+					<p>Implémentation : JAVA</p>
+
+					<ul class="list-group my-4">
+						 <li class="list-group-item"><i class="fas fa-file-pdf"></i><a href="assets/pdf/projects/bus/rapport_bus.pdf" class="pl-3">Rapport de projet<a></li>
+						
+					</ul>
+
+                </div>
+            </section>
+            <hr class="m-0" />
+
+              <section class="project-section" id="10">
+                <div class="project-section-content">
+                    <h2>Carnet de vol en ligne</h2>
+					<p class="mb-4">
+											<span class="badge badge-pill badge-primary">Projet</span>
+											<span class="badge badge-pill badge-success">Web</span>
+										</p>
+                    <p>Passionné d'aviation, j'ai eu la chance de passer ma licence de pilote privé d'avion en août 2015. Selon les règles de la DGAC, chaque pilote se doit d'avoir un carnet de vol dans lequel chaque vol effectué est référencé. Le principal inconvénient de ce carnet au format papier est la difficulté croissante d'accéder à certaines informations à mesure que les heures de vols du pilote augmentent (aérodromes visités, nombre d'heures de vol par type d'aéronef, recherche d'un vol en particulier...). Pour palier à cela, j'ai travaillé sur un site web faisant office de carnet de vol virtuel avec l'avantage néanmoins de pouvoir accéder à plusieurs informations comme celles  citées précédemment.</p>
+
+                    <p>L'onglet principal du site représente le tableau des heures de vols du pilote. Il s'agit d'un tableau dynamique utilisant le plugin "Datatables" pour la librairie javascript "JQuery". Les avantages d'un tel tableau sont multiples : recherche de champs, tri du tableau selon la colomne désirée, pagination dynamique, sélection du nombre de champs à afficher... Le pilote peut ainsi rechercher rapidement est simplement le vol (ou groupe de vols) qu'il recherche.</p>
+                    Un deuxième onglet regroupe quelques statistiques sur les vols présents dans la base de données (nombre d'heures de vol de jour, de nuit, en tant que commandant de bord...) mais également sur la nature des vols et sur les types d'appareils avec visualisations à l'aide de diagrammes.
+                    Un troisième onglet regroupe les différents aérodromes visités avec affichage des points sur une carte.</p>
+
+                    <p>Enfin, le pilote dispose d'un espace administration lui permettant d'ajouter des vols, de modifier des entrées existantes ou de les supprimer.</p>
+                
+                    	 <div class="row my-3 justify-content-md-center">
+                    	 	<div class="col-md-5">
+                    	 		<img src="assets/img/projet/flightlog/fl1.png" alt="..." class="img-thumbnail my-2">
+                    	 	</div>
+                    	 	<div class="col-md-5">
+                    	 		<img src="assets/img/projet/flightlog/fl2.png" alt="..." class="img-thumbnail my-2">
+                    	 	</div>
+                    	 </div>
+                    	 <div class="row my-3 justify-content-md-center">
+                    	 	<div class="col-md-5">
+                    	 		<img src="assets/img/projet/flightlog/fl3.png" alt="..." class="img-thumbnail my-2">
+                    	 	</div>
+                    	 	<div class="col-md-5">
+                    	 		<img src="assets/img/projet/flightlog/fl4.png" alt="..." class="img-thumbnail my-2">
+                    	 	</div>
+                    	 </div>
+
+                   <p>Implémentation : HTML/CSS, PHP, MySql. Plugins & Framework : Bootstrap, Datatables, Google PieCharts, Google Map API</p>
+
+                </div>
+
+            </section>
+            <hr class="m-0" />
+
+              <section class="project-section" id="11">
+                <div class="project-section-content">
+                    <h2>Cryptographie post-quantique</h2>
+                    <p class="mb-4">
+											<span class="badge badge-pill badge-danger">Etude</span>
+											<span class="badge badge-pill badge-info">Maths</span>
+											<span class="badge badge-pill badge-dark">Crypto</span>
+
+					</p>
+                    <p>                    	
+                    	Les algorithmes de cryptographie actuellement déployés pour protéger les systèmes
+						d’informations remplissent parfaitement leur rôle. 
+						Aussi bien en cryptographie symétrique qu'asymétrique, avec des algorithmes tels que l’AES,
+						le 3DES ou encore RSA, les échanges peuvent se faire de manière sécurisée (à
+						condition d’implémenter correctement les protocoles).
+					</p>
+					<p>
+						Ces algorithmes sont souvent basés sur la création de clés simples à générer
+						mais mathématiquement et informatiquement difficiles à inverser. Par exemple
+						dans le cas de RSA, la création de la clé repose sur le choix de deux grands
+						nombres premiers p et q dont on va calculer le produit n. Cependant, l’opération
+						inverse est difficilement réalisable, connaissant uniquement n. Ainsi, les
+						ordinateurs « classiques » ne sont pas en mesure de casser ce genre de chiffrement
+						aujourd’hui. Cependant, avec l’amélioration des technologies de l’information et l’apparition
+						de l’informatique quantique, certains algorithmes pourraient potentiellement
+						être menacés dans le futur.</p>
+					<p>
+						Cette étude présente une branche de la cryptographie qui
+						pourrait s’avérer pertinente face aux problèmes cités précédemment : la cryptographie
+						post-quantique. Il s’agit du domaine visant à sécuriser l’information
+						face à un attaquant qui disposerait d’une force de calcul quantique.
+                    </p>
+                    <p>On commencera l'exposé en décrivant les motivations de la cryptographie post-quantique, en détaillant les méthodes actuellement en place. On expliquera brievement le fonctionnement des ordinateurs quantiques et des algorithmes de Shor et de Grover.</p>
+                    <p>Finalement nous présenterons 3 familles d'algorithmes post-quantiques en détaillant à chaque fois un exemple d'algorithme :
+                    	<ul>
+                    		<li>Cryptographie multivariée (Exemple étudié: Cryptosystème d'Imai-Matsumoto)</li>
+                    		<li>Cryptographie par codes correcteurs d'erreurs (Exemple étudié : Cryptosystème de McEliece)</li>
+                    		<li>Cryptographie fondée sur les réseaux euclidiens (Exemple étudié : NTRUEncrypt)</li>
+                    	</ul>
+                    </p>
+                    <ul class="list-group my-4">
+						 <li class="list-group-item"><i class="fas fa-file-pdf"></i><a href="assets/pdf/projects/crypto/etude_crypto_post_quantique.pdf" class="pl-3">Manuscrit<a></li>
+						
+					</ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+              <section class="project-section" id="12">
+                <div class="project-section-content">
+                    <h2>Etude du Bitcoin</h2>
+                    <p class="mb-4">
+											<span class="badge badge-pill badge-danger">Etude</span>
+											<span class="badge badge-pill badge-dark">Crypto</span>
+										</p>
+                    <p>Etude du Bitcoin dans le cadre d'un cours de cryptographie. On détaille dans cette étude les motivations et le fonctionnement de la cryptomonnaie (transactions, Blockchain, problème de la double-dépense, minage...) </p>
+                    	
+                    <div class="row my-3 justify-content-md-center">
+                    	 	<div class="col-md-5">
+                    	 		<img src="assets/img/projet/bitcoin.png" alt="..." class="img-thumbnail my-2">
+                    	 	</div>
+                    	 	<div class="col-md-5">
+                    	 		<img src="assets/img/projet/bitcoin/bitcoin2.png" alt="..." class="img-thumbnail my-2">
+                    	 	</div>
+                     </div>
+                     <ul class="list-group my-4">
+						 <li class="list-group-item"><i class="fas fa-file-pdf"></i><a href="assets/pdf/projects/bitcoin/etude_bitcoin.pdf" class="pl-3">Manuscrit<a></li>
+						
+					</ul>
+
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!---
+              <section class="project-section" id="12">
+                <div class="project-section-content">
+                    <h2>Etude de l'heuristique IWO</h2>
+                    <p class="mb-4">
+											<span class="badge badge-pill badge-danger">Etude</span>
+											<span class="badge badge-pill badge-warning">Optimisation</span>
+										</p>
+                    <p>Présentation de l'heuristique "Invasive Weed Optimisation (IWO)" dans le cadre d'un cours de métaheuristique pour l'optimisation.</p>
+                    <p>L’algorithme IWO est évolutionnaire et s’inspire directement du comportement de colonisation des mauvaises herbes ainsi que de leur adaptativité à l’environnement (à l'instar de nombreuse métaheuristique s'inspirant de la nature comme les algorithmes génétiques ou encore l'heuristique "colonie de fourmis")</p>
+
+                    <ul class="list-group my-4">
+						 <li class="list-group-item"><i class="fas fa-file-pdf"></i><a href="" class="pl-3">Manuscrit<a></li>
+						
+					</ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            -->
+
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
