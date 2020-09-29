@@ -59,7 +59,7 @@
                     	<span class="badge badge-pill badge-primary">Projet</span>
 						<span class="badge badge-pill badge-secondary">IA - ML</span>
 					</p>
-                    <p>	Cette page présente les travaux effectués lors de mon stage de fin d'études chez Safran Aircraft Engines, au sein du département Analyse de Données et Statistiques.
+                    <p>	Cette section présente les travaux effectués lors de mon stage de fin d'études chez Safran Aircraft Engines, au sein du département Analyse de Données et Statistiques.
                     	 L’objectif était de tester l’implémentation et l’efficacité de l’apprentissage profond, et plus spécifiquement des réseaux de neurones convolutifs dans le cadre de l’analyse de données de vols. Ces structures se sont révélées particulièrement efficaces dans le traitement d’image. Le but était alors de transposer les méthodes et outils à l’analyse de séries temporelles multivariées dans le domaine de l’aviation.</p>
                     	 <div class="row my-3 justify-content-md-center">
                     	 	<div class="col-md-5">
@@ -70,11 +70,11 @@
                     	 </div>
                     	 </div>
                     	 <p>
-                    	 	La structure principale sur laquelle j'ai travaillé est le réseau fully convolutionnal U-Net. Cette structure est à la base utilisée pour la segmentation d'images biomédicales. Mon objectif a été de l'adapter à l'analyse de séries temporelles multivariées, et donc de passer d'une implémentation 2D à une implémentation en 1D, de façon à pouvoir segmenter les vols en différentes portions d'intérêt. (Ici la dimension représente le degré de liberté du parcours des filtres, et non pas le nombre de canaux de la donnée).
+                    	 	La structure principale sur laquelle j'ai travaillé est le réseau fully convolutionnal U-Net. Cette structure est à la base utilisée pour la segmentation d'images biomédicales. Mon objectif a été de l'adapter à l'analyse de séries temporelles multivariées de façon à pouvoir segmenter les vols en différentes portions d'intérêt.
 						</p>
 						
 						<p>	
-							Les résultats obtenus furent satisfaisant puisque le réseau performe à une accuracy d'envrion 95%. Il est a noté également que le réseau est capable de détecter des portions de vols qui n'étaient pas labélisées dans la segmentation réelle. Outre cette tâche principale, j'ai été amené à réaliser différents travaux annexes. Je vous invite à consulter mon rapport de stage ci-dessous.
+							Les résultats obtenus furent satisfaisant puisque le réseau performe à une accuracy d'envrion 95%. Il est à noter également que le réseau est capable de détecter des portions de vols qui n'étaient pas labélisées dans la segmentation réelle. Outre cette tâche principale, j'ai été amené à réaliser différents travaux annexes. Je vous invite à consulter mon rapport de stage ci-dessous.
                     	</p>
                     	<ul class="list-group my-4">
 						  <li class="list-group-item"><i class="fas fa-file-pdf"></i><a href="assets/pdf/projects/stage/rapport_stage_cnn.pdf" class="pl-3">Consulter le rapport de stage</a></li>
@@ -146,7 +146,7 @@
 					</blockquote>
                     </p>
                     <p>
-						Dans le cadre d'un projet de session de Machine Learning, nous nous sommes attelés à l'implémentation d'une IA génératrice de Haïkus. Cette IA repose sur une structure de neurones récurrents. Une fois le réseau entraîné sur un grand nombre d'Haïkus existant, ce dernier est capable de générér, lettre par lettre, de nouveaux haïkus. 
+						Dans le cadre d'un projet de session de Machine Learning, nous nous sommes attelés à l'implémentation d'une IA génératrice de Haïkus. Cette IA repose sur une structure de réseau de neurones récurrents. Une fois le réseau entraîné sur un grand nombre d'Haïkus existant, ce dernier est capable de générér, lettre par lettre, de nouveaux haïkus. 
                     </p>
                     <p>
                     	Le projet a été réalisé en Python à l'aide de la librairie Tensorflow.
@@ -176,7 +176,7 @@
 											<span class="badge badge-pill badge-success">Web</span>
 										</p>
                     <p>Ce projet personnel combine Machine-Learning et algorithme évolutionnaire. Le but était de créer une IA capable d'apprendre à jouer au jeu "Flappy Bird". Le jeu consiste simplement à donner une impulsion à l'oiseau de façon à ce qu'il passe entre les tuyaux le long de son parcours.</p>
-                    <p>Pour ce faire, à chaque itération, on introduit une population d'oiseaux. Chaque individu de cette population est doté d'un état mental codé par un réseau de neurones simple (de type perceptron). Les neurones de la couche d'entrées correspondent à des données inhérentes à la position de l'oiseau dans son environnement (espacement par rapports aux tuyaux, vitesse verticale...). La couche de sortie comporte un neuronne. Lorsque le neuronne est activé, l'oiseau saute.</p>
+                    <p>Pour ce faire, à chaque itération, on introduit une population d'oiseaux. Chaque individu de cette population est doté d'un état mental codé par un réseau de neurones simple (de type perceptron). Les neurones de la couche d'entrées correspondent à des données inhérentes à la position de l'oiseau dans son environnement (espacement par rapports aux tuyaux, vitesse verticale...). La couche de sortie comporte un neurone. Lorsque le neurone est activé, l'oiseau saute.</p>
                     <p>Pour arriver à nos fins, nous utilisons un algorithme génétique. L'apprentissage se fait à l'aide d'une fonction fitness qui évalue la performance de l'individu. Lorsque tous les oiseaux ont échoué, on créé une nouvelle population à partir de la population précédente, en gardant les meilleurs individus et en introduisant des mutations et croisements entre les individus. Ces changements correspondent à des modifications de l'état interne des oiseaux (ie. les poids des réseaux de neurones). De cette façon, les états mentaux des individus évoluent, les meilleurs individus sont d'autant plus susceptibles de participer à la prochaine population tandis que les moins bons sont éliminés.</p>
                     <p>
                    	La population évolue ainsi, jusqu'à ce que les individus soient finalement capables de jouer, sans jamais échouer.
@@ -200,7 +200,7 @@
                                             <span class="badge badge-pill badge-purple">Computer Vision</span>
                                         </p>
                     <p>Le but de ce projet était de développer une application de détection et de reconnaissance en temps réel de panneaux de circulation dans un flux vidéo. Nous avons implémenté le programme en Java à l'aide de la librairie de Computer Vision "OpenCV".</p>
-                    <p>Le traitement vidéo est effectué image par image. Chaque frame de la vidéo est prétraitée en plusieurs étapes : on commence par transformer l'image de l'espace RGB à l'espace HSV (Hue Saturation Value) plus tolérant et indépendant de la luminosité de l'image de façon à faciliter la détection ultérieure. A la suite de cette transformation, on sature les rouges pour cibler les zones pouvant potentiellement être des panneaux. Finalement, un filtre de Canny est appliqué pour détecter les contours et discriminer la signalisation d'autres potentiels objets. Les panneaux ainsi détectés sont extrait et on peut procéder à la reconnaissance.</p>
+                    <p>Le traitement vidéo est effectué image par image. Chaque frame de la vidéo est prétraitée en plusieurs étapes : on commence par transformer l'image de l'espace RGB à l'espace HSV (Hue Saturation Value) plus tolérant et indépendant de la luminosité de l'image de façon à faciliter la détection ultérieure. A la suite de cette transformation, on sature les rouges pour cibler les zones pouvant potentiellement être des panneaux. Finalement, un filtre de Canny est appliqué pour détecter les contours et discriminer la signalisation d'autres potentiels objets. Les panneaux ainsi détectés sont extraits et on peut procéder à la reconnaissance.</p>
                     <p>La reconaissance est réalisée par un matching brute-force à l'aide de l'algorithme ORB. ORB extrait des points d'intérêts dans des images de façon la plus indépendante possible de l'échelle, du cadrage, de l'angle d'observation et de l'exposition. On procède ainsi à l'extraction des features dans la frame du flux vidéo mais également dans notre base de données de panneaux. Une fois ces caractéristiques extraites, elles sont comparées à celles des panneaux en base. Le panneau le plus ressemblant (celui contenant le plus de similitudes avec le panneau détecté) est alors retenu. </p>
                     
 
@@ -294,7 +294,7 @@
 					<p>Notre solution s’est tournée sur l’implémentation d’un agent intelligent qui évalue les configurations de l’échiquier
 					pour déterminer le mouvement le plus favorable qu’il peut jouer.
 					Nous utilisons pour cela, un algorithme MinMax, avec une profondeur fixée et implémenté avec un élagage
-					alpha-beta de façon à réduire le nombre de noeuds évalués. L'évaluation des coups est également associée à des matrices de positions qui permettent d'évaluer la valeur des différentes pièces selon leur localisation sur l'échiquier. Ainsi, l’agent simule un certain nombre de configurations à partir de l’échiquier courant, et suivant une profondeur fixée, évalue les configurations finales possibles puis choisit le mouvement le plus favorable pour lui en fonction
+					alpha-beta de façon à réduire le nombre de noeuds évalués. L'évaluation des coups est également associée à des matrices de positions qui permettent d'évaluer la valeur des différentes pièces selon leurs localisations sur l'échiquier. Ainsi, l’agent simule un certain nombre de configurations à partir de l’échiquier courant, et suivant une profondeur fixée, évalue les configurations finales possibles puis choisit le mouvement le plus favorable pour lui en fonction
 					des évaluations réalisées.</p>
 					<p>Implémentation : JAVA</p>
 					<ul class="list-group my-4">
