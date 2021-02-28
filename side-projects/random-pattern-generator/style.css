@@ -1,0 +1,136 @@
+html, body {
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  background-color: rgb(15,15,15);
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #505050;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main {
+  justify-content: center;
+}
+
+#infos{
+	margin-top: 100px;
+}
+
+h1{
+	
+	font-size: 18px;
+	font-weight: 300;
+}
+
+a{
+	color: gray;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover{
+	color: #226cac;
+}
+
+button {
+	border-radius: 5px;
+  	padding: 5px 10px;
+  	border: none;
+	cursor: pointer;
+	color: white;
+	margin: 25px 10px;
+}
+
+section{
+	max-width: 700px;
+	color: gray;
+	text-align: justify;
+	overflow: visible;
+}
+
+section a{
+	color: white;
+	text-decoration: none;
+}
+
+#sketch-holder{
+	position: relative;
+}
+#percentage{
+	
+	font-size: 12px;
+	position: absolute;
+	bottom: 10px;
+	margin: 0px;
+}
+
+#bottomPanel {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+#bottomPanel li{
+	display: inline;
+}
+
+#settingPanel{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-color: #1a1d24;
+	top: 0px;
+	right: 0px;
+	width: 0px;
+	height: 100%;
+	overflow-x: hidden;
+	transition: 0.5s;
+	border-left: 1px solid #2e2e2e;
+}
+
+#settingPanelConent{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+
+	color: white;
+	height: 100px;
+}
+
+#reset{
+	background-color: #c34a42;
+}
+
+#reset:hover{
+	background-color: #a53521;
+}
+
+#generate{
+	background-color: #787b78;
+}
+
+#generate:hover{
+	background-color: #4e4e4e;
+}
+
+#controlButtons{
+	display: flex;
+	justify-content: center;
+}
+
+#images{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#images p{
+	margin-bottom: 100px;
+}

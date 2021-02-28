@@ -1,0 +1,87 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet"> 
+</head>
+
+<body id="main">
+	<h1>Random Abstract Pattern Generator</h1>
+	<div id="sketch-holder">
+      <p id="percentage"></p>
+  </div>
+
+  <p id="seed"></p>
+
+  <ul id="bottomPanel">
+    <li><a onclick="newPattern(customSettings = false)">New pattern</a></li>
+    <li> - <a id="pauseGenerationLink" onclick="pauseResumeGeneration()">Pause generation</a></li>
+    <li> - <a onclick="openCloseSettingsPanel()">Settings</a></li>
+  </ul>
+
+  <div id="settingPanel">
+    <div id="settingPanelConent">
+
+      <div class="item">
+        <h3>Custom seed</h3>
+        <input type="text" id="customSeed" name="customSeed" autocomplete="off">
+      </div>
+
+      <div class="item">
+        <h3>Color settings</h3>
+        Saturation
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="50" class="slider" id="customSaturation" autocomplete="off" oninput="this.nextElementSibling.value = this.value">
+          <output id="saturationOutput">50</output>
+        </div>
+        Brightness
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="80" class="slider" id="customBrightness" autocomplete="off" oninput="this.nextElementSibling.value = this.value">
+          <output id="brightnessOutput">80</output>
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>Iteration number</h3>
+        <div class="slidecontainer">
+          <input type="range" min="10" max="100" value="50" step="5" class="slider" id="customIteration" autocomplete="off" oninput="this.nextElementSibling.value = this.value">
+          <output id="iterationOutput">50</output>
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>Equation</h3>
+        <div id="methodRadios">
+
+            <input type="radio" id="fujii" name="equation" autocomplete="off" value="1" checked>
+            <label for="fujii">Fujii</label>
+       
+            <input type="radio" id="clifford" name="equation" autocomplete="off" value="2">
+            <label for="clifford">Clifford</label>
+        
+            <input type="radio" id="dejong" name="equation" autocomplete="off" value="3">
+            <label for="dejong">De jong</label>
+     
+        </div>
+      </div>
+
+      <div class="item">
+        <div id="controlButtons">
+          <button id="reset" onclick="resetPanelSettings()">Reset</button>
+          <button id="generate" onclick="newPattern(customSettings=true)">Generate</button>
+        </div>
+      </div>
+
+      <div class="item">
+        <p><small>Clifford and De Jong might not work all the time</small></p>
+        <p><a href="infos.html">Learn more about the generator</a></p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
+

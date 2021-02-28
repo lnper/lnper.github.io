@@ -1,0 +1,51 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet"> 
+</head>
+
+<body id="infos">
+	<!-- <h1>Randomness</h1> -->
+	<h1>About Random Abstract Pattern Generator</h1>
+  <section>
+	  <p>For some reason, I stumbled upon a Facebook Group called <a href="https://www.facebook.com/PerlinArtBot7403">PerlinArtBot7403</a> a few days ago. This is a place where a Bot posts its random generated artworks everyday. The generating process is based on Perlin noise field algorithms (but not only). The community can then download the code and try to play around with parameters to produce their own results. The original code is in C++ and I thought it could be fun to make a web version of it.</p>
+    <p>The original project offers a large number of generation process (Perlin Noise Field, Attractors, Fractal... ). Here, I focused on Fujii Atractors (More details below).
+    The code I wrote is largely inspired by the original one you can find <a href="https://github.com/dvalim/perlinfieldbot">here</a>. For this project, I used <a href="https://p5js.org/">P5.js</a> which is a awesome Javascript Library for creative coding.</p> 
+    <p>The generation process is quite simple : it consists in computing a bunch of random coefficients and plotting points according to some recurrence formulas using those coefficients. The first formulas I used were the Fujii ones that I took from the original project. After some research, I add two other attractors (Clifford and Dejong) which seem to be at the origin of the first one. You can select them in the settings panel.</p>
+    <p>Feel free to check those links for more informations on the equations: 
+      <ul>
+        <li><a href="https://how-to-build-du-e.tumblr.com/">Fujii attractor</a></li>
+        <li><a href="http://paulbourke.net/fractals/clifford/">Clifford attractor</a></li>
+        <li><a href="http://paulbourke.net/fractals/peterdejong/">DeJong attractor</a></li>
+      </ul>
+    </p>
+    <p>You'll also find bellow some nice generations I got from this project. Thank's for reading.</p>
+    <p>Lilzer7</p>
+  </section>
+  <section id="images">
+    <img src="img/pattern1.png" width="700px">
+    <p>Seed: 342586596768</p>
+    <img src="img/pattern3.png" width="700px">
+    <p>Seed: 882844055977</p>
+    <img src="img/pattern2.png" width="700px">
+    <p>Seed: 594906691071</p>
+    <img src="img/pattern4.png" width="700px">
+    <p>Seed: 942565634814</p>
+    <img src="img/pattern5.png" width="700px">
+    <p>Seed: 270896545378</p>
+    <img src="img/pattern6.png" width="700px">
+    <p>Seed: 578165634069</p>
+    <img src="img/pattern7.png" width="700px">
+    <p>Seed: 385711734323</p>
+  </section>
+  <section>
+    <p><a href="index.html">Back to generator</a></p>
+  </section>
+
+
+
+</body>
+</html>
+
